@@ -7,25 +7,45 @@
 GRAV_COMP	include/scorpio_tester/scorpio_tester.hpp	/^    enum Modes{OFF, ZERO_TORQUE, GRAV_COMP, STATIONARY, SINE_WAVE};$/;"	e	enum:scorpio_tester::ScorpioTester::Modes
 Modes	include/scorpio_tester/scorpio_tester.hpp	/^    enum Modes{OFF, ZERO_TORQUE, GRAV_COMP, STATIONARY, SINE_WAVE};$/;"	g	class:scorpio_tester::ScorpioTester
 OFF	include/scorpio_tester/scorpio_tester.hpp	/^    enum Modes{OFF, ZERO_TORQUE, GRAV_COMP, STATIONARY, SINE_WAVE};$/;"	e	enum:scorpio_tester::ScorpioTester::Modes
+SCORPIO_NODELET	include/scorpio_tester/ScorpioNodelet.hpp	/^#define SCORPIO_NODELET$/;"	d
 SCORPIO_TESTER	include/scorpio_tester/scorpio_tester.hpp	/^#define SCORPIO_TESTER$/;"	d
-SCORPIO_TESTER_NODELET	include/scorpio_tester/scorpio_tester_nodelet.hpp	/^#define SCORPIO_TESTER_NODELET$/;"	d
 SINE_WAVE	include/scorpio_tester/scorpio_tester.hpp	/^    enum Modes{OFF, ZERO_TORQUE, GRAV_COMP, STATIONARY, SINE_WAVE};$/;"	e	enum:scorpio_tester::ScorpioTester::Modes
 STATIONARY	include/scorpio_tester/scorpio_tester.hpp	/^    enum Modes{OFF, ZERO_TORQUE, GRAV_COMP, STATIONARY, SINE_WAVE};$/;"	e	enum:scorpio_tester::ScorpioTester::Modes
+ScorpioNodelet	include/scorpio_tester/ScorpioNodelet.hpp	/^  class ScorpioNodelet: public nodelet::Nodelet$/;"	c	namespace:scorpio_nodelet
 ScorpioTester	include/scorpio_tester/scorpio_tester.hpp	/^  class ScorpioTester$/;"	c	namespace:scorpio_tester
 ScorpioTester	src/scorpio_tester.cpp	/^  ScorpioTester::ScorpioTester(std::vector<std::string> slave_name, boost::shared_ptr<aptk::comm::Synchronizer> sync, boost::shared_ptr<aptk::comm::RTNodeHandle> rt_nh, double* damping_ratio, double* base_kd)$/;"	f	class:scorpio_tester::ScorpioTester
-ScorpioTesterNodelet	include/scorpio_tester/scorpio_tester_nodelet.hpp	/^  class ScorpioTesterNodelet: public nodelet::Nodelet$/;"	c	namespace:scorpio_tester
 ZERO_TORQUE	include/scorpio_tester/scorpio_tester.hpp	/^    enum Modes{OFF, ZERO_TORQUE, GRAV_COMP, STATIONARY, SINE_WAVE};$/;"	e	enum:scorpio_tester::ScorpioTester::Modes
+atv_idx_list	include/scorpio_tester/ScorpioNodelet.hpp	/^    std::vector<int> atv_idx_list;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+buildActiveJointIdx	src/ScorpioNodelet.cpp	/^    void ScorpioNodelet::buildActiveJointIdx(){$/;"	f	class:ScorpioNodelet
+buildPayloadJointIdx	src/ScorpioNodelet.cpp	/^    void ScorpioNodelet::buildPayloadJointIdx(){$/;"	f	class:ScorpioNodelet
 calcQueuedGains	src/scorpio_tester.cpp	/^  void ScorpioTester::calcQueuedGains(double stiffness_factor)$/;"	f	class:scorpio_tester::ScorpioTester
+callGetService	include/scorpio_tester/ScorpioNodelet.hpp	/^      void ScorpioNodelet::callGetService(const std::string& slave_name, const std::string& srv_name, SrvType& srv_obj)$/;"	f	class:scorpio_nodelet::ScorpioNodelet
+callSetService	include/scorpio_tester/ScorpioNodelet.hpp	/^      void ScorpioNodelet::callSetService(const std::string& slave_name, const std::string& srv_name, SrvType& srv_obj)$/;"	f	class:scorpio_nodelet::ScorpioNodelet
+copyData	src/ScorpioNodelet.cpp	/^    void ScorpioNodelet::copyData(){$/;"	f	class:ScorpioNodelet
 feedforwardTorque	src/scorpio_tester.cpp	/^  double ScorpioTester::feedforwardTorque(double pos, double vel, double acc)$/;"	f	class:scorpio_tester::ScorpioTester
 hlModeCallback	src/scorpio_tester.cpp	/^  void ScorpioTester::hlModeCallback(uint16_t data)$/;"	f	class:scorpio_tester::ScorpioTester
+initialize	src/ScorpioNodelet.cpp	/^    void ScorpioNodelet::initialize(){$/;"	f	class:ScorpioNodelet
 m_acc_d	include/scorpio_tester/scorpio_tester.hpp	/^    float m_acc_d; \/\/Note: not sent to axons$/;"	m	class:scorpio_tester::ScorpioTester
 m_base_kd	include/scorpio_tester/scorpio_tester.hpp	/^    double* m_base_kd;$/;"	m	class:scorpio_tester::ScorpioTester
-m_base_kd	include/scorpio_tester/scorpio_tester_nodelet.hpp	/^    double m_base_kd;$/;"	m	class:scorpio_tester::ScorpioTesterNodelet
-m_controller_core	include/scorpio_tester/scorpio_tester_nodelet.hpp	/^    int m_controller_core;$/;"	m	class:scorpio_tester::ScorpioTesterNodelet
-m_controller_priority	include/scorpio_tester/scorpio_tester_nodelet.hpp	/^    int m_controller_priority;$/;"	m	class:scorpio_tester::ScorpioTesterNodelet
-m_controller_rt	include/scorpio_tester/scorpio_tester_nodelet.hpp	/^    bool m_controller_rt;$/;"	m	class:scorpio_tester::ScorpioTesterNodelet
+m_command	include/scorpio_tester/ScorpioNodelet.hpp	/^    ScorpioCommand* m_command;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_controller_core	include/scorpio_tester/ScorpioNodelet.hpp	/^    int m_controller_core;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_controller_priority	include/scorpio_tester/ScorpioNodelet.hpp	/^    int m_controller_priority;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_controller_rt	include/scorpio_tester/ScorpioNodelet.hpp	/^    bool m_controller_rt;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_copy_cmd_jpos_atv	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXd m_copy_cmd_jpos_atv;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_copy_cmd_jtrq_atv	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXd m_copy_cmd_jtrq_atv;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_copy_cmd_jvel_atv	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXd m_copy_cmd_jvel_atv;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_copy_cmd_pld_frc	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXd m_copy_cmd_pld_frc;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_copy_ft_sensor	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::Vector6d m_copy_ft_sensor;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_copy_jpos	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXd m_copy_jpos;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_copy_jtrq_atv	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXd m_copy_jtrq_atv;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_copy_jvel	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXd m_copy_jvel;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_copy_mom_arm_atv	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXd m_copy_mom_arm_atv;\/\/only inertia joint changes$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_copy_mot_curr_atv	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXd m_copy_mot_curr_atv;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_copy_mot_temp_atv	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXd m_copy_mot_temp_atv;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_copy_mot_temp_pld	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXd m_copy_mot_temp_pld;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_copy_pld_frc	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXd m_copy_pld_frc;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_count	include/scorpio_tester/ScorpioNodelet.hpp	/^    int m_count;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
 m_damping_ratio	include/scorpio_tester/scorpio_tester.hpp	/^    double* m_damping_ratio;$/;"	m	class:scorpio_tester::ScorpioTester
-m_damping_ratio	include/scorpio_tester/scorpio_tester_nodelet.hpp	/^    double m_damping_ratio;$/;"	m	class:scorpio_tester::ScorpioTesterNodelet
 m_eff_d	include/scorpio_tester/scorpio_tester.hpp	/^    float m_eff_d;$/;"	m	class:scorpio_tester::ScorpioTester
 m_fault_str	include/scorpio_tester/scorpio_tester.hpp	/^    std::string m_fault_str;$/;"	m	class:scorpio_tester::ScorpioTester
 m_faults	include/scorpio_tester/scorpio_tester.hpp	/^    uint16_t m_faults;$/;"	m	class:scorpio_tester::ScorpioTester
@@ -40,29 +60,48 @@ m_freq_rad_2	include/scorpio_tester/scorpio_tester.hpp	/^    double m_freq_rad_2
 m_frequency	include/scorpio_tester/scorpio_tester.hpp	/^    double m_frequency;$/;"	m	class:scorpio_tester::ScorpioTester
 m_hl_mode	include/scorpio_tester/scorpio_tester.hpp	/^    uint16_t m_hl_mode;$/;"	m	class:scorpio_tester::ScorpioTester
 m_init_mode	include/scorpio_tester/scorpio_tester.hpp	/^    bool m_init_mode;$/;"	m	class:scorpio_tester::ScorpioTester
+m_interface	include/scorpio_tester/ScorpioNodelet.hpp	/^    ScorpioInterface* m_interface;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
 m_kd_adj_factor	include/scorpio_tester/scorpio_tester.hpp	/^    double m_kd_adj_factor;$/;"	m	class:scorpio_tester::ScorpioTester
 m_last_frequency	include/scorpio_tester/scorpio_tester.hpp	/^    double m_last_frequency;$/;"	m	class:scorpio_tester::ScorpioTester
 m_ll_mode	include/scorpio_tester/scorpio_tester.hpp	/^    uint16_t m_ll_mode;$/;"	m	class:scorpio_tester::ScorpioTester
 m_log_data	include/scorpio_tester/scorpio_tester.hpp	/^    bool m_log_data;$/;"	m	class:scorpio_tester::ScorpioTester
 m_max_joint_pos	include/scorpio_tester/scorpio_tester.hpp	/^    float m_max_joint_pos;$/;"	m	class:scorpio_tester::ScorpioTester
 m_min_joint_pos	include/scorpio_tester/scorpio_tester.hpp	/^    float m_min_joint_pos;$/;"	m	class:scorpio_tester::ScorpioTester
+m_num_atv_j	include/scorpio_tester/ScorpioNodelet.hpp	/^    int m_num_atv_j;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_num_tot_j	include/scorpio_tester/ScorpioNodelet.hpp	/^    int m_num_tot_j;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
 m_pos	include/scorpio_tester/scorpio_tester.hpp	/^    float m_pos;$/;"	m	class:scorpio_tester::ScorpioTester
 m_pos_d	include/scorpio_tester/scorpio_tester.hpp	/^    float m_pos_d;$/;"	m	class:scorpio_tester::ScorpioTester
 m_queued_jnt_imp_kd	include/scorpio_tester/scorpio_tester.hpp	/^    float m_queued_jnt_imp_kd;$/;"	m	class:scorpio_tester::ScorpioTester
 m_queued_jnt_imp_kp	include/scorpio_tester/scorpio_tester.hpp	/^    float m_queued_jnt_imp_kp;$/;"	m	class:scorpio_tester::ScorpioTester
-m_relative_bus_time	include/scorpio_tester/scorpio_tester_nodelet.hpp	/^    double m_relative_bus_time;$/;"	m	class:scorpio_tester::ScorpioTesterNodelet
+m_raw_cmd_jpos_atv	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXf m_raw_cmd_jpos_atv;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_raw_cmd_jtrq_atv	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXf m_raw_cmd_jtrq_atv;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_raw_cmd_jvel_atv	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXf m_raw_cmd_jvel_atv;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_raw_cmd_pld_frc	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXf m_raw_cmd_pld_frc;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_raw_ft_sensor	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::Vector6f m_raw_ft_sensor;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_raw_jpos	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXf m_raw_jpos;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_raw_jtrq_atv	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXf m_raw_jtrq_atv;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_raw_jvel	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXf m_raw_jvel;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_raw_mom_arm_atv	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXf m_raw_mom_arm_atv;\/\/only inertia joint changes$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_raw_mot_curr_atv	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXf m_raw_mot_curr_atv;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_raw_mot_temp_atv	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXf m_raw_mot_temp_atv;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_raw_mot_temp_pld	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXf m_raw_mot_temp_pld;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_raw_pld_frc	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXf m_raw_pld_frc;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_rotor_inertia_atv	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXd m_rotor_inertia_atv;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_rt_nh	include/scorpio_tester/ScorpioNodelet.hpp	/^    boost::shared_ptr<aptk::comm::RTNodeHandle> m_rt_nh;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
 m_rt_nh	include/scorpio_tester/scorpio_tester.hpp	/^    boost::shared_ptr<aptk::comm::RTNodeHandle> m_rt_nh;$/;"	m	class:scorpio_tester::ScorpioTester
-m_rt_nh	include/scorpio_tester/scorpio_tester_nodelet.hpp	/^    boost::shared_ptr<aptk::comm::RTNodeHandle> m_rt_nh;$/;"	m	class:scorpio_tester::ScorpioTesterNodelet
+m_sensor_data	include/scorpio_tester/ScorpioNodelet.hpp	/^    ScorpioSensorData* m_sensor_data;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
 m_sine_phase	include/scorpio_tester/scorpio_tester.hpp	/^    double m_sine_phase;$/;"	m	class:scorpio_tester::ScorpioTester
 m_sine_run_time	include/scorpio_tester/scorpio_tester.hpp	/^    float m_sine_run_time;$/;"	m	class:scorpio_tester::ScorpioTester
 m_slave_idx	include/scorpio_tester/scorpio_tester.hpp	/^    int m_slave_idx;$/;"	m	class:scorpio_tester::ScorpioTester
+m_slave_list	include/scorpio_tester/ScorpioNodelet.hpp	/^    std::vector<std::string> m_slave_list;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
 m_slave_names	include/scorpio_tester/scorpio_tester.hpp	/^    std::vector<std::string> m_slave_names;$/;"	m	class:scorpio_tester::ScorpioTester
-m_spin_thread	include/scorpio_tester/scorpio_tester_nodelet.hpp	/^    boost::shared_ptr<boost::thread> m_spin_thread;$/;"	m	class:scorpio_tester::ScorpioTesterNodelet
+m_spin_thread	include/scorpio_tester/ScorpioNodelet.hpp	/^    boost::shared_ptr<boost::thread> m_spin_thread;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
 m_start_time	include/scorpio_tester/scorpio_tester.hpp	/^    double m_start_time;$/;"	m	class:scorpio_tester::ScorpioTester
+m_static_gr_atv	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXf m_static_gr_atv;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_static_torque_limits_atv	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXf m_static_torque_limits_atv;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+m_sync	include/scorpio_tester/ScorpioNodelet.hpp	/^    boost::shared_ptr<aptk::comm::Synchronizer> m_sync;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
 m_sync	include/scorpio_tester/scorpio_tester.hpp	/^    boost::shared_ptr<aptk::comm::Synchronizer> m_sync;$/;"	m	class:scorpio_tester::ScorpioTester
-m_sync	include/scorpio_tester/scorpio_tester_nodelet.hpp	/^    boost::shared_ptr<aptk::comm::Synchronizer> m_sync;$/;"	m	class:scorpio_tester::ScorpioTesterNodelet
 m_temp	include/scorpio_tester/scorpio_tester.hpp	/^    float m_temp;$/;"	m	class:scorpio_tester::ScorpioTester
-m_testers	include/scorpio_tester/scorpio_tester_nodelet.hpp	/^    std::unordered_map<std::string, boost::shared_ptr<ScorpioTester> > m_testers;$/;"	m	class:scorpio_tester::ScorpioTesterNodelet
 m_torque	include/scorpio_tester/scorpio_tester.hpp	/^    float m_torque;$/;"	m	class:scorpio_tester::ScorpioTester
 m_using_jnt_imp_kd	include/scorpio_tester/scorpio_tester.hpp	/^    float m_using_jnt_imp_kd;$/;"	m	class:scorpio_tester::ScorpioTester
 m_using_jnt_imp_kp	include/scorpio_tester/scorpio_tester.hpp	/^    float m_using_jnt_imp_kp;$/;"	m	class:scorpio_tester::ScorpioTester
@@ -70,18 +109,30 @@ m_vel	include/scorpio_tester/scorpio_tester.hpp	/^    float m_vel;$/;"	m	class:s
 m_vel_d	include/scorpio_tester/scorpio_tester.hpp	/^    float m_vel_d;$/;"	m	class:scorpio_tester::ScorpioTester
 m_waveform_max	include/scorpio_tester/scorpio_tester.hpp	/^    double m_waveform_max;$/;"	m	class:scorpio_tester::ScorpioTester
 m_waveform_min	include/scorpio_tester/scorpio_tester.hpp	/^    double m_waveform_min;$/;"	m	class:scorpio_tester::ScorpioTester
-onInit	src/scorpio_tester_nodelet.cpp	/^  void ScorpioTesterNodelet::onInit()$/;"	f	class:scorpio_tester::ScorpioTesterNodelet
+maxJointPosition	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXd maxJointPosition;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+maxTemperature	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXd maxTemperature;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+maxTemperature_pld	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXd maxTemperature_pld;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+maxTorque	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXd maxTorque;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+maxTorque_pld	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXd maxTorque_pld;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+maxVelocity	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXd maxVelocity;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+minJointPosition	include/scorpio_tester/ScorpioNodelet.hpp	/^    Eigen::VectorXd minJointPosition;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+onInit	src/ScorpioNodelet.cpp	/^  void ScorpioNodelet::onInit()$/;"	f	class:scorpio_nodelet::ScorpioNodelet
+parameterSetting	src/ScorpioNodelet.cpp	/^    void ScorpioNodelet::parameterSetting(){$/;"	f	class:ScorpioNodelet
+payload_idx_list	include/scorpio_tester/ScorpioNodelet.hpp	/^    std::vector<int> payload_idx_list;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+preProcess	src/ScorpioNodelet.cpp	/^    void ScorpioNodelet::preProcess(){$/;"	f	class:ScorpioNodelet
 process	src/scorpio_tester.cpp	/^  void ScorpioTester::process(double t)$/;"	f	class:scorpio_tester::ScorpioTester
 processGravity	src/scorpio_tester.cpp	/^  void ScorpioTester::processGravity(double t)$/;"	f	class:scorpio_tester::ScorpioTester
 processOff	src/scorpio_tester.cpp	/^  void ScorpioTester::processOff(double t)$/;"	f	class:scorpio_tester::ScorpioTester
 processSine	src/scorpio_tester.cpp	/^  void ScorpioTester::processSine(double t)$/;"	f	class:scorpio_tester::ScorpioTester
 processStationary	src/scorpio_tester.cpp	/^  void ScorpioTester::processStationary(double t)$/;"	f	class:scorpio_tester::ScorpioTester
 processZero	src/scorpio_tester.cpp	/^  void ScorpioTester::processZero(double t)$/;"	f	class:scorpio_tester::ScorpioTester
+scorpio_nodelet	include/scorpio_tester/ScorpioNodelet.hpp	/^namespace scorpio_nodelet$/;"	n
+scorpio_nodelet	src/ScorpioNodelet.cpp	/^namespace scorpio_nodelet$/;"	n	file:
 scorpio_tester	include/scorpio_tester/scorpio_tester.hpp	/^namespace scorpio_tester$/;"	n
-scorpio_tester	include/scorpio_tester/scorpio_tester_nodelet.hpp	/^namespace scorpio_tester$/;"	n
 scorpio_tester	src/scorpio_tester.cpp	/^namespace scorpio_tester$/;"	n	file:
-scorpio_tester	src/scorpio_tester_nodelet.cpp	/^namespace scorpio_tester$/;"	n	file:
+sensordata_idx_list	include/scorpio_tester/ScorpioNodelet.hpp	/^    std::vector<int> sensordata_idx_list;$/;"	m	class:scorpio_nodelet::ScorpioNodelet
+setCurrentPositionCmd	src/ScorpioNodelet.cpp	/^    void ScorpioNodelet::setCurrentPositionCmd(){$/;"	f	class:ScorpioNodelet
 setImpedanceGains	src/scorpio_tester.cpp	/^  void ScorpioTester::setImpedanceGains(float kp, float kd)$/;"	f	class:scorpio_tester::ScorpioTester
-spinThread	src/scorpio_tester_nodelet.cpp	/^  void ScorpioTesterNodelet::spinThread()$/;"	f	class:scorpio_tester::ScorpioTesterNodelet
+spinThread	src/ScorpioNodelet.cpp	/^  void ScorpioNodelet::spinThread()$/;"	f	class:scorpio_nodelet::ScorpioNodelet
 stiffnessCallback	src/scorpio_tester.cpp	/^  void ScorpioTester::stiffnessCallback(double data)$/;"	f	class:scorpio_tester::ScorpioTester
-~ScorpioTesterNodelet	src/scorpio_tester_nodelet.cpp	/^  ScorpioTesterNodelet::~ScorpioTesterNodelet()$/;"	f	class:scorpio_tester::ScorpioTesterNodelet
+~ScorpioNodelet	src/ScorpioNodelet.cpp	/^  ScorpioNodelet::~ScorpioNodelet()$/;"	f	class:scorpio_nodelet::ScorpioNodelet
