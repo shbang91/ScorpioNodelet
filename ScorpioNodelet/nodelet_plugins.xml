@@ -1,0 +1,8 @@
+<library path = "lib/libScorpioNodelet">
+    <class name = "scorpio_nodelet/ScorpioNodelet" type="scorpio_nodelet::ScorpioNodelet" base_class_type="nodelet::Nodelet">
+        <description>
+                scorpio nodelet
+        </description>
+    </class>
+</library>
+

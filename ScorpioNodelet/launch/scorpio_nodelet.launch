@@ -1,0 +1,18 @@
+<launch>
+/*<arg name="plot" default="true"/>*/
+
+ <arg name="enforced_loop_rate" default="1000"/>
+ <param name="/synapse/enforced_loop_rate" value="$(arg enforced_loop_rate)"/>
+
+ <include file="$(find synapse)/launch/synapse.launch">
+    <arg name="log_data" value="false"/>
+ </include>
+
+/*<group if="$(arg plot)">*/
+/*<node pkg="plotjuggler" type="PlotJuggler" name="PlotJuggler" args="-l $(find taurus_tester)/plotjuggler/pos_vel_eff.xml" />*/
+/*</group>*/
+
+ <node pkg="nodelet" type="nodelet" name="ScorpioNodelet" args="load scorpio_nodelet/ScorpioNodelet synapse_group --no-bond" output="screen">
+ </node>
+/*<node name="control_ui" pkg="control_ui" type="control_ui" output="screen"/>*/
+</launch>

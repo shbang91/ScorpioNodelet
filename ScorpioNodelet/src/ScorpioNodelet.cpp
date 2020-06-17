@@ -1,4 +1,4 @@
-#include "scorpio_tester/scorpio_tester_nodelet.hpp"
+#include "ScorpioNodelet/ScorpioNodelet.hpp"
 #include "Configuration.h"
 #include "Utils/IO/IOUtilities.hpp"
 #include "Utils/Math/MathUtilities.hpp"

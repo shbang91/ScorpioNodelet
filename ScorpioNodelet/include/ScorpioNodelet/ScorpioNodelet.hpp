@@ -39,9 +39,6 @@ namespace scorpio_nodelet
     std::vector<int> payload_idx_list;
     std::vector<int> sensordata_idx_list;
 
-    void buildActiveJointIdx();
-    void buildPayloadJointIdx();
-    void preProcess();
 
     int m_count;
     int m_num_atv_j;
@@ -102,6 +99,9 @@ namespace scorpio_nodelet
     void turnOff();
 
 
+    void buildActiveJointIdx();
+    void buildPayloadJointIdx();
+    void preProcess();
     void copyData();
     void checkSensorData();
     void parameterSetting();
